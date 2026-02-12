@@ -7,20 +7,24 @@ public class DivisionPractice {
         String input;
         int numerator, divisor, result;
 
+
+
+
         while (true) {
             System.out.print("Enter the numerator: ");
             input = scan.next();
 
-            
             if (input.toLowerCase().charAt(0) == 'q') {
                 break;
             }
+
 
             try {
                 numerator = Integer.parseInt(input);
 
                 System.out.print("Enter the divisor: ");
                 divisor = scan.nextInt();
+
 
                 
                 if (divisor == 0) {
@@ -39,6 +43,9 @@ public class DivisionPractice {
 
                 System.out.println("You can't divide by zero.");
             }
+            
+
+
             
             System.out.println(); 
         }
