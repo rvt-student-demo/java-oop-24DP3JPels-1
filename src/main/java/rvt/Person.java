@@ -1,23 +1,32 @@
 package rvt;
 
 public class Person {
-    private String name;  //Ja ir privāts, Tu NEVARĒSI no citiem failiem pievienot jebko!!!
-    private String address;
-    private int credits;
-    
-    public Person(String name ,String address){
+    protected String name;
+    protected String address;
+
+    public Person(String name, String address) {
         this.name = name;
         this.address = address;
     }
-public String GetName() {
-    return this.name;
-}
-public String GetAddress() {
-    return this.address;
-}
 
-public int Study(int credits){
-    this.credits = credits;
-    credits =+1;
-}
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAddress() {
+        return this.address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    @Override
+    public String toString() {
+        return "Name: " + this.name + " | Address: " + this.address;
+    }
 }
